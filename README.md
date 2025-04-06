@@ -1,5 +1,5 @@
 # <p align="center"> Mind-Animator </p> 
-This is the official code for the paper "Animate Your Thoughts: Reconstruction of Dynamic Natural Vision from Human Brain Activity"[**ICLR 2025**] [Project page](https://mind-animator-design.github.io/)
+This is the official code for the paper "Animate Your Thoughts: Reconstruction of Dynamic Natural Vision from Human Brain Activity"[**ICLR 2025**] [Project page](https://mind-animator-design.github.io/) [Paper](https://arxiv.org/pdf/2405.03280)
 
 ## <p align="center">  Related works  </p> 
 ![](https://github.com/ReedOnePeck/Mind-Animator/blob/main/images/related_works.png)<br>
