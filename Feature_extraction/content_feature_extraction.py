@@ -46,7 +46,7 @@ def feature_extractor(data_clas):
     for j in tqdm(range(len(file_names))):
         file_name = file_names[j]
         video_file_path = path + file_name
-        vr = decord.VideoReader(video_file_path, width=256,height=256)
+        vr = decord.VideoReader(video_file_path, width=512,height=512)
         sample_index = np.array(list(range(0, len(vr), 1)))[[0,8,16,24,32,40,48,56]]
         video = vr.get_batch(sample_index)
         video = rearrange(video, "f h w c -> f c h w")
@@ -61,9 +61,10 @@ def feature_extractor(data_clas):
         content_latents.append(latents)
 
     all_contents = np.concatenate(content_latents,axis = 0)
-    np.save(path + 'contents256_float32.npy',all_contents)
+    np.save(path + 'contents_float32',all_contents)
     print(all_contents.shape)
     return
 
 a = feature_extractor(data_clas = 'Train')
+
 b = feature_extractor(data_clas = 'Test')
